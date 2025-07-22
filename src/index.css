@@ -1,0 +1,72 @@
+@import "tailwindcss";
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  //color-scheme: light dark;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+.animate-blob {
+  animation: blob 1s infinite;
+}
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+.animation {
+  width: 15ch;
+  overflow: hidden;
+  text-wrap: nowrap;
+  animation: linears 7s steps(15, end) forwards infinite;
+}
+
+@keyframes linears {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 15ch;
+  }
+}
+.animatview {
+  animation: view 2s forwards;
+}
+@keyframes view {
+  from {
+    height: 10px;
+    scale: 0.5;
+  }
+  to {
+    height: 250px;
+    scale: 1;
+  }
+}
+
+.animateclose {
+  animation: close 2s forwards;
+}
+@keyframes close {
+  from {
+    height: 250px;
+    scale: 1;
+  }
+  to {
+    height: 0px;
+    scale: 0.5;
+  }
+}
